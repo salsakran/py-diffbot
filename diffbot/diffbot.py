@@ -229,7 +229,7 @@ def main(debug = False):
   # Output document based on options
   if options.output == 'raw':
     print article
-  elif options.output = 'json':
+  elif options.output == 'json':
     from pprint import pprint
     pprint(article)
   else:
