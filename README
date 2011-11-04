@@ -29,13 +29,13 @@ $ ./diffbot.py
 Usage: diffbot.py: [options] [url]
 
 Options:
-  -h, --help            show this help message and exit
-  -d, --debug           
-  -v, --verbose         
-  -q, --quiet           
-  -o OFORMAT, --output=OFORMAT
-                        Ouput format (html, raw, json, pretty)
-  -k KEY                Diffbot developer API key
+    -h, --help                        show this help message and exit
+    -d, --debug
+    -v, --verbose
+    -q, --quiet
+    -o OFORMAT, --output=OFORMAT
+                                                Ouput format (html, raw, json, pretty)
+    -k KEY                                Diffbot developer API key
 
 }}}
 
@@ -60,7 +60,7 @@ import diffbot
 
 def main(url):
 	db = diffbot.DiffBot(dev_token = "mydevtoken")
-	article = db.get_article(url)
+	article = db.article(url)
 }}}
 
 === Links and Resources ===
