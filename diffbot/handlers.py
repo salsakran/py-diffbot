@@ -84,7 +84,7 @@ class UrlfetchHandler(HttpHandler):
 
             if result:
                 if result.status_code == 200:
-                    return result.content.decode('UTF-8')
+                    return result.content
 
         return False
 
@@ -104,7 +104,7 @@ class UrllibHandler(HttpHandler):
             if fh.getcode() != 200:
                 logging.error("urllib http request returned status code: %s" % fh.getcode())
                 return False
-            result = fh.read().decode('UTF-8')
+            result = fh.read()
         except Exception, e:
             logging.exception("urllib error: %s", str(e))
             return False
